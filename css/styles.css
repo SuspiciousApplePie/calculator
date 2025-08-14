@@ -10,3 +10,7 @@
     text-align: center;
     padding: 20px;
 }
+
+.main-content {
+    display: flex;
+}
