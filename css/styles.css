@@ -20,5 +20,5 @@ body {
 .main-content {
     display: flex;
     flex-direction: column;
-    max-width: 250px;
+    max-width: 5000px;
 }
