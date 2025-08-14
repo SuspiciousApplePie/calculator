@@ -24,4 +24,5 @@
 
 .main-wrapper .keys .row {
     display: flex;
+    justify-content: space-between;
 }
