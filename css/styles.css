@@ -22,6 +22,12 @@
     gap: 10px;
 }
 
+.main-wrapper .keys {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .main-wrapper .keys .row {
     display: flex;
     justify-content: space-between;
