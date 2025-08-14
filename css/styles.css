@@ -21,8 +21,10 @@
     flex-direction: column;
     gap: 10px;
 }
+
 .main-content input {
     height: 40px;
+    font-size: 1.4em;
 }
 
 .main-wrapper .keys {
