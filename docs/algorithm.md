@@ -1,0 +1,24 @@
+# Calculator Algorithm
+
+## Main operation
+### addition(num1, num2)
+1. return the sum of `num1` and `num2`
+
+### subtraction(num1, num2)
+1. return the difference of `num1` and `num2`
+
+### multiplication(num1, num2)
+1. return the product of `num1` and `num2`
+
+### division(num1, num2)
+1. return the quotient of `num1` and `num2`
+
+### operator(num1, num2, operator)
+1. if operator is equal `+`
+    1. call `addition()` and put `num1` and `num2` as params
+1. if operator is equal `+`
+    1. call `subtraction()` and put `num1` and `num2` as params
+1. if operator is equal `+`
+    1. call `multiplication() `and put `num1` and `num2` as params
+1. if operator is equal `+`
+    1. call `division()` and put `num1` and `num2` as params
