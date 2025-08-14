@@ -26,3 +26,7 @@
     display: flex;
     justify-content: space-between;
 }
+
+.row .key {
+    width: 10px;
+}
