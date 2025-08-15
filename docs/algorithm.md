@@ -26,10 +26,10 @@
 ## Typing operation
 ### init()
 1. select the .keys inside .main-content
-1. select the input inside .main-content
 1. Add click event listener in .keys
 
 ### getClick(e)
+1. select the input inside .main-content
 1. if the classList contains num
     run typeFunction
 1. if the classList contains ops
