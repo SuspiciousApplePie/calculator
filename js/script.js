@@ -53,4 +53,8 @@ function typeNumber(input, content) {
     input.value += content;
 }
 
+function clearNum(input) {
+    input.value = input.value.slice(0, -1);
+}
+
 init();
