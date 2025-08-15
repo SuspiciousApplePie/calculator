@@ -49,4 +49,8 @@ function getClick (e) {
     }
 }
 
+function typeNumber(input, content) {
+    input.value += content;
+}
+
 init();
