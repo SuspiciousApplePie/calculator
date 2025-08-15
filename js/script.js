@@ -36,7 +36,7 @@ function operation (num1, num2, operation) {
 }
 
 function init () {
-    const btn = document.querySelectorAll('.key');
+    const btn = document.querySelector('.main-content');
     console.log(btn);
 }
 
