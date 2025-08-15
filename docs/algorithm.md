@@ -32,10 +32,13 @@
 1. select the input inside .main-content
 1. prevent the default of input
 1. if the classList contains num
-    run typeFunction
+    1. run typeFunction
 1. if the classList contains ops
-    run operator function
+    1. run operator function
 1. if the id is clear
-    run clear function
+    1. run clear function
 1. if id is all-clear
     run all clear function 
+
+### typeNumber(input, btnContent)
+1. in the value of input, add the textContent in the input
