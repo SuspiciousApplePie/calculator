@@ -19,13 +19,18 @@ function division(num1, num2) {
 }
 
 function operation (num1, num2, operation) {
-    if (operation === '+') {
-        addition(num1, num2);
-    } else if (operation === '-') {
-        subtraction(num1, num2);
-    } else if (operation === '*') {
-        multiplication(num1, num2);
-    } else if (operation === '/') {
-        division(num1, num2);
+    switch (operation) {
+        case '+':
+            addition(num1, num2);
+            break;
+        case '-':
+            subtraction(num1, num2);
+            break;
+        case '*':
+            multiplication(num1, num2);
+            break;
+        case '/':
+            division(num1, num2);
+            break;
     }
 }
