@@ -42,6 +42,8 @@ function init() {
 }
 
 function getClick (e) {
+    const input = document.querySelector('input');
+    console.log(input)
     if (e.target.classList.contains('num')) {
         console.log(e.target.textContent);
     }
