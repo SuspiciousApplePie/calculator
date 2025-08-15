@@ -25,5 +25,7 @@ function operation (num1, num2, operation) {
         subtraction(num1, num2);
     } else if (operation === '*') {
         multiplication(num1, num2);
+    } else if (operation === '/') {
+        division(num1, num2);
     }
 }
