@@ -28,3 +28,13 @@
 1. select the .keys inside .main-content
 1. select the input inside .main-content
 1. Add click event listener in .keys
+
+### getClick(e)
+1. if the classList contains num
+    run typeFunction
+1. if the classList contains ops
+    run operator function
+1. if the id is clear
+    run clear function
+1. if id is all-clear
+    run all clear function 
