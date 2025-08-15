@@ -25,8 +25,8 @@
 
 ## Typing operation
 ### init()
-1. select the .keys inside .main-content
-1. Add click event listener in .keys
+1. select the .main-content
+1. Add click event listener in .main-content
 
 ### getClick(e)
 1. select the input inside .main-content
