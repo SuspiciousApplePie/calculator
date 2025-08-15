@@ -46,6 +46,8 @@ function getClick (e) {
     console.log(input)
     if (e.target.classList.contains('num')) {
         typeNumber(input, e.target.textContent);
+    } else if (e.target.id === 'clear') {
+        clearNum(input);
     }
 }
 
