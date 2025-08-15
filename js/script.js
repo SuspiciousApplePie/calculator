@@ -34,3 +34,10 @@ function operation (num1, num2, operation) {
             break;
     }
 }
+
+function init () {
+    const btn = document.querySelectorAll('.key');
+    console.log(btn);
+}
+
+init();
