@@ -22,3 +22,9 @@
     1. call `multiplication() `and put `num1` and `num2` as params
 1. if operator is equal `+`
     1. call `division()` and put `num1` and `num2` as params
+
+## Typing operation
+### init()
+1. select the .keys inside .main-content
+1. select the input inside .main-content
+1. Add click event listener in .keys
