@@ -59,4 +59,10 @@ function clearNum(input) {
     input.value = input.value.slice(0, -1);
 }
 
+const calculatorState = {
+    firstNum: null,
+    secondNum: null,
+    operator: null,
+}
+
 init();
