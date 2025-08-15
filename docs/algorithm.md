@@ -42,3 +42,6 @@
 
 ### typeNumber(input, btnContent)
 1. in the value of input, add the textContent in the input
+
+### clearNum(input)
+1. slice the value of input
