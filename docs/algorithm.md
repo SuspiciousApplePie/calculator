@@ -30,6 +30,7 @@
 
 ### getClick(e)
 1. select the input inside .main-content
+1. prevent the default of input
 1. if the classList contains num
     run typeFunction
 1. if the classList contains ops
