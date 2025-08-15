@@ -35,10 +35,16 @@ function operation (num1, num2, operation) {
     }
 }
 
-function init () {
+function init() {
     const btn = document.querySelector('.main-content');
     console.log(btn);
     btn.addEventListener('click', getClick);
+}
+
+function getClick (e) {
+    if (e.target.classList.contains('num')) {
+        console.log(e.target.textContent);
+    }
 }
 
 init();
