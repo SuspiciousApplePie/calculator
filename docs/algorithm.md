@@ -45,3 +45,8 @@
 
 ### clearNum(input)
 1. slice the value of input
+
+### calculatorState {}
+1. set the first number to null
+2. set the second number to null
+3. set operation to null
