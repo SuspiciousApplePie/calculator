@@ -42,6 +42,9 @@
 
 ### typeNumber(input, btnContent)
 1. in the value of input, add the textContent in the input
+1. if the first num in calculator state is null
+    1. store the value there
+1. else store it on the second number.
 
 ### clearNum(input)
 1. slice the value of input
