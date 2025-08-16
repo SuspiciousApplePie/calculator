@@ -43,7 +43,6 @@ function init() {
 
 function getClick (e) {
     const input = document.querySelector('input');
-    console.log(input)
     if (e.target.classList.contains('num')) {
         typeNumber(input, e.target.textContent);
     } else if (e.target.id === 'clear') {
