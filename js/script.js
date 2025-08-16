@@ -56,6 +56,10 @@ function typeNumber(input, content) {
     input.value += content;
 }
 
+function getOperation(opsSymbol) {
+    console.log(opsSymbol)
+}
+
 function clearNum(input) {
     input.value = input.value.slice(0, -1);
 }
