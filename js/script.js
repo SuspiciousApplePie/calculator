@@ -54,7 +54,7 @@ function getClick (e) {
     } else if (e.target.id === 'all-clear') {
         allClear(input);
     } else if (e.target.id === 'equal') {
-        console.log('equal');
+        showEqual(input);
     }
 }
 
@@ -83,6 +83,12 @@ function clearNum(input) {
 function allClear(input) {
     input.value = null;
     console.log('all');
+}
+
+function showEqual(input) {
+    input.value = operation(calculatorState.firstNum, calculatorState.secondNum, calculatorState.operator);
+    typeNumber(input, input.value);
+    console.log(calculatorState);
 }
 
 const calculatorState = {
