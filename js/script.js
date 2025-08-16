@@ -42,7 +42,13 @@ function getClick (e) {
     if (e.target.classList.contains('num')) {
         typeNumber(input, e.target.textContent);
     } else if (e.target.classList.contains('ops')) {
-        getOperation(input, e.target.textContent)
+        console.log(calculatorState);
+        if (calculatorState.operator && calculatorState.secondNum !== null) {
+            calculatorState.firstNum = operation(Number(calculatorState.firstNum), Number(calculatorState.secondNum), calculatorState.operator);
+            calculatorState.secondNum = null;
+            console.log(calculatorState);
+        }
+        getOperation(input, e.target.textContent)  
     } else if (e.target.id === 'clear') {
         clearNum(input);
     } else if (e.target.id === 'all-clear') {
