@@ -40,6 +40,9 @@
 1. if id is all-clear
     run all clear function 
 
+### allClear(input, btnContent)
+1. make the value of input an empty string
+
 ### typeNumber(input, btnContent)
 1. in the value of input, add the textContent in the input
 1. if the first num in calculator state is null
