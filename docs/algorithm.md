@@ -49,8 +49,9 @@
     1. store the value in firstNum
 1. else store it on the second number.
 
-### getOperation(btnContent)
+### getOperation(input, btnContent)
 1. store the operation in the operation in state object
+1. empty the input value
 
 ### clearNum(input)
 1. slice the value of input
