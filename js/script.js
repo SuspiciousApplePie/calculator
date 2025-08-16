@@ -59,6 +59,11 @@ function clearNum(input) {
     input.value = input.value.slice(0, -1);
 }
 
+function allClear(input) {
+    input.value = '';
+    console.log('all');
+}
+
 const calculatorState = {
     firstNum: null,
     secondNum: null,
