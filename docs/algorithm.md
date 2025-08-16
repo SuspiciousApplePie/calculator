@@ -69,3 +69,8 @@
 ### showEqual(input)
 1. set the input value of result of operators function
 1. call the typeNumber to reset operation
+
+### resetState()
+1. set first number to null
+2. set second num to null
+3. set operator to null
