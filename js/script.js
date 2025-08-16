@@ -78,6 +78,15 @@ function getOperation(input, opsSymbol) {
 
 function clearNum(input) {
     input.value = input.value.slice(0, -1);
+    if (!calculatorState.operator) {
+        calculatorState.firstNum = input.value;
+        if (calculatorState.firstNum === '') calculatorState.firstNum = null;
+    } else {
+        calculatorState.secondNum = input.value;
+        if (calculatorState.secondNum === '') calculatorState.secondNum = null;
+    }
+
+    console.log(calculatorState);
 }
 
 function allClear(input) {
