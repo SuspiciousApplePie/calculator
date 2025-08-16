@@ -21,17 +21,13 @@ function division(num1, num2) {
 function operation (num1, num2, operation) {
     switch (operation) {
         case '+':
-            addition(num1, num2);
-            break;
+            return addition(num1, num2);
         case '-':
-            subtraction(num1, num2);
-            break;
+            return subtraction(num1, num2);
         case '×':
-            multiplication(num1, num2);
-            break;
+            return multiplication(num1, num2);
         case '÷':
-            division(num1, num2);
-            break;
+            return division(num1, num2);
     }
 }
 
