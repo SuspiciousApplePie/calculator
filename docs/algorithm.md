@@ -52,7 +52,11 @@
 1. in the value of input, add the textContent in the input
 1. if the operation is null
     1. store the value in firstNum
+    1. if number is equal to empty string.
+        1. make first num a null
 1. else store it on the second number.
+    1. if number is equal to empty string.
+        1. make second num a null
 
 ### getOperation(input, btnContent)
 1. if the firstNum is false
