@@ -27,6 +27,7 @@ function operation (num1, num2, operation) {
         case '×':
             return multiplication(num1, num2);
         case '÷':
+            if (num1 === 0 || num2 === 0) return 'Error';
             return division(num1, num2);
     }
 }
