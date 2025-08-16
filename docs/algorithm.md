@@ -46,6 +46,7 @@
 
 ### allClear(input, btnContent)
 1. make the value of input an empty string
+1. call resetState()
 
 ### typeNumber(input, btnContent)
 1. in the value of input, add the textContent in the input
@@ -68,6 +69,7 @@
 
 ### showEqual(input)
 1. set the input value of result of operators function
+1. call resetState()  
 1. call the typeNumber to reset operation
 
 ### resetState()
