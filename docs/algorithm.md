@@ -50,8 +50,9 @@
 1. else store it on the second number.
 
 ### getOperation(input, btnContent)
-1. store the operation in the operation in state object
-1. empty the input value
+1. if the firstNum is false
+    1. store the operation in the operation in state object
+    1. empty the input value
 
 ### clearNum(input)
 1. slice the value of input
