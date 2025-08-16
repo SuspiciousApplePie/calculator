@@ -51,6 +51,8 @@ function getClick (e) {
         clearNum(input);
     } else if (e.target.id === 'all-clear') {
         allClear(input);
+    } else if (e.target.id === 'equal') {
+        console.log('equal');
     }
 }
 
