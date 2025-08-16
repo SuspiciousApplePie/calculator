@@ -26,10 +26,10 @@ function operation (num1, num2, operation) {
         case '-':
             subtraction(num1, num2);
             break;
-        case '*':
+        case '×':
             multiplication(num1, num2);
             break;
-        case '/':
+        case '÷':
             division(num1, num2);
             break;
     }
