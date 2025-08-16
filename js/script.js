@@ -86,9 +86,14 @@ function allClear(input) {
 }
 
 function showEqual(input) {
-    input.value = operation(calculatorState.firstNum, calculatorState.secondNum, calculatorState.operator);
-    typeNumber(input, input.value);
-    console.log(calculatorState);
+    if (calculatorState.firstNum && calculatorState.secondNum && calculatorState.operator) {
+        input.value = operation(Number(calculatorState.firstNum), 
+                                Number(calculatorState.secondNum), 
+                                calculatorState.operator);
+        calculatorState.firstNum = input.value;
+        console.log(calculatorState);
+    }
+
 }
 
 function resetState() {
