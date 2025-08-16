@@ -67,7 +67,7 @@ function clearNum(input) {
 }
 
 function allClear(input) {
-    input.value = '';
+    input.value = null;
     console.log('all');
 }
 
