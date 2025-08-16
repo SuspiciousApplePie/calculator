@@ -82,7 +82,8 @@ function clearNum(input) {
 
 function allClear(input) {
     input.value = null;
-    console.log('all');
+    resetState();
+    console.log(calculatorState);
 }
 
 function showEqual(input) {
