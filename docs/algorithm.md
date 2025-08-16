@@ -35,6 +35,9 @@
     1. run typeFunction
 1. if the classList contains ops
     1. run operator function
+        1.if there is operator
+            1. call operator function, take the object keys as parameters and store the result
+            1. assign the result in the firstNum state.
 1. if the id is clear
     1. run clear function
 1. if id is all-clear
