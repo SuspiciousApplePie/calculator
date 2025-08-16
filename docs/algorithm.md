@@ -21,6 +21,8 @@
 1. if operator is equal `+`
     1. call `multiplication() `and put `num1` and `num2` as params
 1. if operator is equal `+`
+    1. if num1 or num2 is equal to zero
+        1. return syntax error
     1. call `division()` and put `num1` and `num2` as params
 
 ## Typing operation
