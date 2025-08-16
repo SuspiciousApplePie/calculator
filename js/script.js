@@ -91,6 +91,12 @@ function showEqual(input) {
     console.log(calculatorState);
 }
 
+function resetState() {
+    calculatorState.firstNum = null;
+    calculatorState.secondNum = null;
+    calculatorState.operator = null;
+}
+
 const calculatorState = {
     firstNum: null,
     secondNum: null,
