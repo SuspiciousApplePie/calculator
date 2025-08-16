@@ -56,6 +56,12 @@ function getClick (e) {
 
 function typeNumber(input, content) {
     input.value += content;
+    if (!calculatorState.operator) {
+        calculatorState.firstNum = input.value;
+    } else {
+        calculatorState.secondNum = input.value;
+    }
+    console.log(calculatorState);
 }
 
 function getOperation(opsSymbol) {
