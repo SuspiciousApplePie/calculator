@@ -50,7 +50,7 @@
 1. else store it on the second number.
 
 ### getOperation(btnContent)
-1. print the content of btnContent
+1. store the operation in the operation in state object
 
 ### clearNum(input)
 1. slice the value of input
