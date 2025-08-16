@@ -48,6 +48,8 @@ function getClick (e) {
         typeNumber(input, e.target.textContent);
     } else if (e.target.id === 'clear') {
         clearNum(input);
+    } else if (e.target.id === 'all-clear') {
+        allClear(input);
     }
 }
 
