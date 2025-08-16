@@ -67,8 +67,11 @@ function typeNumber(input, content) {
 }
 
 function getOperation(input, opsSymbol) {
-    calculatorState.operator = opsSymbol;
-    input.value = null;
+    if (calculatorState.firstNum) {
+        calculatorState.operator = opsSymbol;
+        input.value = null;
+    }
+    console.log(calculatorState);
 }
 
 function clearNum(input) {
