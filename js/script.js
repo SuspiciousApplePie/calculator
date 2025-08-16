@@ -45,6 +45,8 @@ function getClick (e) {
     const input = document.querySelector('input');
     if (e.target.classList.contains('num')) {
         typeNumber(input, e.target.textContent);
+    } else if (e.target.classList.contains('ops')) {
+        getOperation(e.target.textContent)
     } else if (e.target.id === 'clear') {
         clearNum(input);
     } else if (e.target.id === 'all-clear') {
