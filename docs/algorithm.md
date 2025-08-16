@@ -49,6 +49,9 @@
     1. store the value there
 1. else store it on the second number.
 
+### getOperation(btnContent)
+1. print the content of btnContent
+
 ### clearNum(input)
 1. slice the value of input
 
