@@ -46,7 +46,7 @@ function getClick (e) {
     if (e.target.classList.contains('num')) {
         typeNumber(input, e.target.textContent);
     } else if (e.target.classList.contains('ops')) {
-        getOperation(e.target.textContent)
+        getOperation(input, e.target.textContent)
     } else if (e.target.id === 'clear') {
         clearNum(input);
     } else if (e.target.id === 'all-clear') {
@@ -64,8 +64,9 @@ function typeNumber(input, content) {
     console.log(calculatorState);
 }
 
-function getOperation(opsSymbol) {
-    console.log(opsSymbol)
+function getOperation(input, opsSymbol) {
+    calculatorState.operator = opsSymbol;
+    input.value = null;
 }
 
 function clearNum(input) {
