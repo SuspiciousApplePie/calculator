@@ -113,6 +113,7 @@ function showEqual(input) {
         input.value = operation(Number(calculatorState.firstNum), 
                                 Number(calculatorState.secondNum), 
                                 calculatorState.operator);
+        resetState()
         calculatorState.firstNum = input.value;
         console.log(calculatorState);
     }
