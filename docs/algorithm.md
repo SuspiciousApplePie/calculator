@@ -34,10 +34,10 @@
 1. select the input inside .main-content
 1. prevent the default of input
 1. if the classList contains num
-    1. run typeFunction
-1. if the classList contains ops
     1. if the event id is equal dot and input value contains . in last character
         1. return none
+    1. run typeFunction
+1. if the classList contains ops
     1. run operator function
         1.if there is operator and second num is already populated.
             1. call operator function, take the object keys as parameters and store the result
