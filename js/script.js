@@ -130,6 +130,8 @@ function resetState() {
 }
 
 function getKeyboardClick(e) {
+    if (e.target.tagName === 'INPUT') e.preventDefault();
+
     const input = document.querySelector('input');
     console.log(e.key);
     if (Number((e.key) >= 0 && Number(e.key) <= 9) || e.key === '.') {
