@@ -159,6 +159,9 @@ function getKeyboardClick(e) {
         case 'Delete':
             clearNum(input);
             break;
+        case 'x':
+        case 'X':
+            allClear(input);
     }
 }
 
