@@ -17,16 +17,16 @@ function division(num1, num2) {
 function operation (num1, num2, operation) {
     switch (operation) {
         case '+':
-            return addition(num1, num2);
+            return addition(num1, num2).toFixed(2);;
         case '-':
-            return subtraction(num1, num2);
+            return subtraction(num1, num2).toFixed(2);;
         case '×':
         case '*':
-            return multiplication(num1, num2);
+            return multiplication(num1, num2).toFixed(2);;
         case '/':
         case '÷':
             if (num1 === 0 || num2 === 0) return 'Error';
-            return division(num1, num2);
+            return division(num1, num2).toFixed(2);;
     }
 }
 
@@ -143,7 +143,7 @@ function showEqual(input) {
     if (calculatorState.firstNum && calculatorState.secondNum && calculatorState.operator) {
         input.value = operation(Number(calculatorState.firstNum), 
                                 Number(calculatorState.secondNum), 
-                                calculatorState.operator).toFixed(2);
+                                calculatorState.operator);
         resetState()
         calculatorState.firstNum = input.value;
     }
