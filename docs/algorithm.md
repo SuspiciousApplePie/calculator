@@ -63,7 +63,7 @@
         1. make second num a null
 
 ### getOperation(input, btnContent)
-1. if the firstNum is false
+1. if the firstNum is true and number does not match dot in last character
     1. store the operation in the operation in state object
     1. empty the input value
 
