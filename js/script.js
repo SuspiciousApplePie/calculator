@@ -115,7 +115,7 @@ function showEqual(input) {
     if (calculatorState.firstNum && calculatorState.secondNum && calculatorState.operator) {
         input.value = operation(Number(calculatorState.firstNum), 
                                 Number(calculatorState.secondNum), 
-                                calculatorState.operator);
+                                calculatorState.operator).toFixed(2);
         resetState()
         calculatorState.firstNum = input.value;
         console.log(calculatorState);
