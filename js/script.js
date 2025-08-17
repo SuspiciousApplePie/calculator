@@ -1,20 +1,16 @@
 function addition (num1, num2) {
-    console.log(num1 + num2);
     return num1 + num2;
 }
 
 function subtraction(num1, num2) {
-    console.log(num1 - num2);
     return num1 - num2;
 }
 
 function multiplication(num1, num2) {
-    console.log(num1 * num2);
     return num1 * num2;
 }
 
 function division(num1, num2) {
-    console.log(num1 / num2);
     return num1 / num2;
 }
 
@@ -36,7 +32,6 @@ function operation (num1, num2, operation) {
 
 function init() {
     const btn = document.querySelector('.main-content');
-    console.log(btn);
     btn.addEventListener('click', getClick);
     document.addEventListener('keydown', getKeyboardClick);
 }
@@ -47,11 +42,9 @@ function getClick (e) {
         if (e.target.id === 'dot' && input.value.includes('.')) return;
         typeNumber(input, e.target.textContent);
     } else if (e.target.classList.contains('ops')) {
-        console.log(calculatorState);
         if (calculatorState.operator && calculatorState.secondNum !== null) {
             calculatorState.firstNum = operation(Number(calculatorState.firstNum), Number(calculatorState.secondNum), calculatorState.operator);
             calculatorState.secondNum = null;
-            console.log(calculatorState);
         }
         getOperation(input, e.target.textContent)  
     } else if (e.target.id === 'clear') {
@@ -74,7 +67,6 @@ function typeNumber(input, content) {
     } else {
         calculatorState.secondNum = input.value;
     }
-    console.log(calculatorState);
 }
 
 function getOperation(input, opsSymbol) {
@@ -82,7 +74,6 @@ function getOperation(input, opsSymbol) {
         calculatorState.operator = opsSymbol;
         input.value = '0';
     }
-    console.log(calculatorState);
 }
 
 function clearNum(input) {
@@ -100,15 +91,12 @@ function clearNum(input) {
             input.value = 0;
         }
     }
-
-    console.log(calculatorState);
 }
 
 function allClear(input) {
     input.value = null;
     resetState();
     input.value = 0;
-    console.log(calculatorState);
 }
 
 function showEqual(input) {
@@ -118,7 +106,6 @@ function showEqual(input) {
                                 calculatorState.operator).toFixed(2);
         resetState()
         calculatorState.firstNum = input.value;
-        console.log(calculatorState);
     }
 
 }
@@ -133,7 +120,6 @@ function getKeyboardClick(e) {
     if (e.target.tagName === 'INPUT') e.preventDefault();
 
     const input = document.querySelector('input');
-    console.log(e.key);
     if (Number((e.key) >= 0 && Number(e.key) <= 9) || e.key === '.') {
         if (e.key === '.' && input.value.includes('.')) return;
         typeNumber(input, e.key);
@@ -148,13 +134,11 @@ function getKeyboardClick(e) {
             if (calculatorState.operator && calculatorState.secondNum !== null) {
                 calculatorState.firstNum = operation(Number(calculatorState.firstNum), Number(calculatorState.secondNum), calculatorState.operator);
                 calculatorState.secondNum = null;
-            console.log(calculatorState);
         }
             getOperation(input, e.key);
             break;
         case '=':
         case 'Enter':
-            console.log('equal');
             showEqual(input);
             break;
         case 'Backspace':
