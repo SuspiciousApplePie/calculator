@@ -93,6 +93,8 @@
 3. set operator to null
 
 ### getKeyboardClick(e)
+1. if event tag name is input
+    1. prevent default behavior
 1. if event value of key in 0-9 or dot
     1. if dot is already inside the input
         1. return none;
