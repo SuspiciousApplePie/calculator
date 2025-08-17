@@ -58,6 +58,42 @@ function getClick (e) {
     }
 }
 
+function getKeyboardClick(e) {
+    if (e.target.tagName === 'INPUT') e.preventDefault();
+
+    const input = document.querySelector('input');
+    // Check if key is number or dot.
+    if (Number((e.key) >= 0 && Number(e.key) <= 9) || e.key === '.') {
+        if (e.key === '.' && input.value.includes('.')) return;
+        typeNumber(input, e.key);
+    }
+    
+    switch (e.key) {
+        case '+':
+        case '-':
+        case '*':
+        case '/':
+            // For Chain Operation: Verify if operator is true and second num is not null
+            if (calculatorState.operator && calculatorState.secondNum !== null) {
+                calculatorState.firstNum = operation(Number(calculatorState.firstNum), Number(calculatorState.secondNum), calculatorState.operator);
+                calculatorState.secondNum = null;
+        }
+            getOperation(input, e.key);
+            break;
+        case '=':
+        case 'Enter':
+            showEqual(input);
+            break;
+        case 'Backspace':
+        case 'Delete':
+            clearNum(input);
+            break;
+        case 'x':
+        case 'X':
+            allClear(input);
+    }
+}
+
 function typeNumber(input, content) {
     if (input.value === '0' && content !== '.') {
         input.value = content;
@@ -111,49 +147,12 @@ function showEqual(input) {
         resetState()
         calculatorState.firstNum = input.value;
     }
-
 }
 
 function resetState() {
     calculatorState.firstNum = null;
     calculatorState.secondNum = null;
     calculatorState.operator = null;
-}
-
-function getKeyboardClick(e) {
-    if (e.target.tagName === 'INPUT') e.preventDefault();
-
-    const input = document.querySelector('input');
-    // Check if key is number or dot.
-    if (Number((e.key) >= 0 && Number(e.key) <= 9) || e.key === '.') {
-        if (e.key === '.' && input.value.includes('.')) return;
-        typeNumber(input, e.key);
-    }
-    
-    switch (e.key) {
-        case '+':
-        case '-':
-        case '*':
-        case '/':
-            // For Chain Operation: Verify if operator is true and second num is not null
-            if (calculatorState.operator && calculatorState.secondNum !== null) {
-                calculatorState.firstNum = operation(Number(calculatorState.firstNum), Number(calculatorState.secondNum), calculatorState.operator);
-                calculatorState.secondNum = null;
-        }
-            getOperation(input, e.key);
-            break;
-        case '=':
-        case 'Enter':
-            showEqual(input);
-            break;
-        case 'Backspace':
-        case 'Delete':
-            clearNum(input);
-            break;
-        case 'x':
-        case 'X':
-            allClear(input);
-    }
 }
 
 const calculatorState = {
