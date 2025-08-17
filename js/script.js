@@ -41,6 +41,7 @@ function init() {
 function getClick (e) {
     const input = document.querySelector('input');
     if (e.target.classList.contains('num')) {
+        if (e.target.id === 'dot' && input.value.includes('.')) return;
         typeNumber(input, e.target.textContent);
     } else if (e.target.classList.contains('ops')) {
         console.log(calculatorState);
