@@ -83,7 +83,7 @@
 3. set operation to null
 
 ### showEqual(input)
-1. if each key of calculator state is true
+1. if each key of calculator state is true and dot is not the last value in input
     1. set the input value to result of operators function
     1. call resetState()  
     1. re assign the result to first number
