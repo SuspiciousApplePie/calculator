@@ -150,6 +150,12 @@ function getKeyboardClick(e) {
         }
             getOperation(input, e.key);
             break;
+        case '=':
+        case 'Enter':
+            console.log('equal');
+            showEqual(input);
+            break;
+        
     }
 }
 
