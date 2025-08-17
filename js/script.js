@@ -39,9 +39,11 @@ function init() {
 function getClick (e) {
     const input = document.querySelector('input');
     if (e.target.classList.contains('num')) {
+        // Check if there is already a dot in input
         if (e.target.id === 'dot' && input.value.includes('.')) return;
         typeNumber(input, e.target.textContent);
     } else if (e.target.classList.contains('ops')) {
+        // For Chain Operation: Verify if operator is true and second num is not null
         if (calculatorState.operator && calculatorState.secondNum !== null) {
             calculatorState.firstNum = operation(Number(calculatorState.firstNum), Number(calculatorState.secondNum), calculatorState.operator);
             calculatorState.secondNum = null;
@@ -78,6 +80,7 @@ function getOperation(input, opsSymbol) {
 
 function clearNum(input) {
     input.value = input.value.slice(0, -1);
+    // Check where the input gets assigned in object.
     if (!calculatorState.operator) {
         calculatorState.firstNum = input.value;
         if (calculatorState.firstNum === '') {
@@ -100,6 +103,7 @@ function allClear(input) {
 }
 
 function showEqual(input) {
+    // If all state is not null show answer
     if (calculatorState.firstNum && calculatorState.secondNum && calculatorState.operator) {
         input.value = operation(Number(calculatorState.firstNum), 
                                 Number(calculatorState.secondNum), 
@@ -120,6 +124,7 @@ function getKeyboardClick(e) {
     if (e.target.tagName === 'INPUT') e.preventDefault();
 
     const input = document.querySelector('input');
+    // Check if key is number or dot.
     if (Number((e.key) >= 0 && Number(e.key) <= 9) || e.key === '.') {
         if (e.key === '.' && input.value.includes('.')) return;
         typeNumber(input, e.key);
@@ -130,7 +135,7 @@ function getKeyboardClick(e) {
         case '-':
         case '*':
         case '/':
-            console.log('symbol');
+            // For Chain Operation: Verify if operator is true and second num is not null
             if (calculatorState.operator && calculatorState.secondNum !== null) {
                 calculatorState.firstNum = operation(Number(calculatorState.firstNum), Number(calculatorState.secondNum), calculatorState.operator);
                 calculatorState.secondNum = null;
