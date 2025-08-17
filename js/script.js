@@ -36,6 +36,7 @@ function init() {
     const btn = document.querySelector('.main-content');
     console.log(btn);
     btn.addEventListener('click', getClick);
+    document.addEventListener('keydown', getKeyboardClick);
 }
 
 function getClick (e) {
@@ -124,6 +125,10 @@ function resetState() {
     calculatorState.firstNum = null;
     calculatorState.secondNum = null;
     calculatorState.operator = null;
+}
+
+function getKeyboardClick(e) {
+    console.log(e.target.value)
 }
 
 const calculatorState = {
