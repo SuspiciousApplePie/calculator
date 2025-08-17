@@ -29,7 +29,7 @@
 ### init()
 1. select the .main-content
 1. Add click event listener in .main-content
-
+1. Add keydown event listener in document
 ### getClick(e)
 1. select the input inside .main-content
 1. prevent the default of input
