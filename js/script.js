@@ -155,7 +155,10 @@ function getKeyboardClick(e) {
             console.log('equal');
             showEqual(input);
             break;
-        
+        case 'Backspace':
+        case 'Delete':
+            clearNum(input);
+            break;
     }
 }
 
