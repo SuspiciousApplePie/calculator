@@ -128,7 +128,11 @@ function resetState() {
 }
 
 function getKeyboardClick(e) {
-    console.log(e.target.value)
+    const input = document.querySelector('input');
+    console.log(e.key);
+    if (Number(e.key) >= 0 || Number(e.key) <= 9) {
+        typeNumber(input, e.key);
+    }
 }
 
 const calculatorState = {
