@@ -143,6 +143,11 @@ function getKeyboardClick(e) {
         case '*':
         case '/':
             console.log('symbol');
+            if (calculatorState.operator && calculatorState.secondNum !== null) {
+                calculatorState.firstNum = operation(Number(calculatorState.firstNum), Number(calculatorState.secondNum), calculatorState.operator);
+                calculatorState.secondNum = null;
+            console.log(calculatorState);
+        }
             getOperation(input, e.key);
             break;
     }
