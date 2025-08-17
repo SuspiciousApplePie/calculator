@@ -91,3 +91,19 @@
 1. set first number to null
 2. set second num to null
 3. set operator to null
+
+### getKeyboardClick(e)
+1. if event value of key in 0-9 or dot
+    1. if dot is already inside the input
+        1. return none;
+    run type function
+1. if event value is (+, -, *, /)
+    1. if the operation state is true and 2nd number is true
+        1. call operation and put it on the firstNumber state
+        1. make the 2nd num state null
+    1. run and get the operation
+1. if target is backspace
+    1. run the clearNum
+1. if target is equal
+    1. run the showEqual
+
