@@ -136,6 +136,16 @@ function getKeyboardClick(e) {
         if (e.key === '.' && input.value.includes('.')) return;
         typeNumber(input, e.key);
     }
+    
+    switch (e.key) {
+        case '+':
+        case '-':
+        case '*':
+        case '/':
+            console.log('symbol');
+            getOperation(input, e.key);
+            break;
+    }
 }
 
 const calculatorState = {
