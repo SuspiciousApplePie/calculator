@@ -38,11 +38,12 @@
         1. return none
     1. run typeFunction
 1. if the classList contains ops
-    1. run operator function
-        1.if there is operator and second num is already populated.
-            1. call operator function, take the object keys as parameters and store the result
-            1. reset the secondNum value to null
-            1. assign the result in the firstNum state.
+    1. if the firstNum is true and number does not match dot in last character
+        1. run operator function
+            1.if there is operator and second num is already populated and secondNum value does not end with dot.
+                1. call operator function, take the object keys as parameters and store the result
+                1. reset the secondNum value to null
+                1. assign the result in the firstNum state.
 1. if the id is clear
     1. run clear function
 1. if id is all-clear
@@ -63,9 +64,8 @@
         1. make second num a null
 
 ### getOperation(input, btnContent)
-1. if the firstNum is true and number does not match dot in last character
-    1. store the operation in the operation in state object
-    1. empty the input value
+1. store the operation in the operation in state object
+1. empty the input value
 
 ### clearNum(input)
 1. slice the value of input
