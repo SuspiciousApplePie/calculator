@@ -61,7 +61,11 @@ function getClick (e) {
 }
 
 function typeNumber(input, content) {
-    input.value += content;
+    if (input.value === '0' && content !== '.') {
+        input.value = content;
+    } else {
+        input.value += content;
+    }
     if (!calculatorState.operator) {
         calculatorState.firstNum = input.value;
     } else {
@@ -73,7 +77,7 @@ function typeNumber(input, content) {
 function getOperation(input, opsSymbol) {
     if (calculatorState.firstNum) {
         calculatorState.operator = opsSymbol;
-        input.value = null;
+        input.value = '0';
     }
     console.log(calculatorState);
 }
@@ -82,10 +86,16 @@ function clearNum(input) {
     input.value = input.value.slice(0, -1);
     if (!calculatorState.operator) {
         calculatorState.firstNum = input.value;
-        if (calculatorState.firstNum === '') calculatorState.firstNum = null;
+        if (calculatorState.firstNum === '') {
+            calculatorState.firstNum = null;
+            input.value = 0;
+        }
     } else {
         calculatorState.secondNum = input.value;
-        if (calculatorState.secondNum === '') calculatorState.secondNum = null;
+        if (calculatorState.secondNum === '') {
+            calculatorState.secondNum = null;
+            input.value = 0;
+        }
     }
 
     console.log(calculatorState);
@@ -94,6 +104,7 @@ function clearNum(input) {
 function allClear(input) {
     input.value = null;
     resetState();
+    input.value = 0;
     console.log(calculatorState);
 }
 
