@@ -67,6 +67,13 @@
 
 ### clearNum(input)
 1. slice the value of input
+    1. if operator state is false
+        1. update the first num
+        1. if character is empty
+            1. make first num a null
+    1. else put it on second num
+        1. if second num is empty
+            1. make 2nd num null
 
 ### calculatorState {}
 1. set the first number to null
