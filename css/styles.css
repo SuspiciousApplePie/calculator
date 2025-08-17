@@ -26,7 +26,10 @@ body {
 .main-content .main-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
+    background-color: #9966CC;
+    padding: 20px;
+}
 }
 
 .main-content input {
