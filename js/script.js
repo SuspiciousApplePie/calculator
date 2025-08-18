@@ -25,7 +25,7 @@ function operation (num1, num2, operation) {
             return multiplication(num1, num2).toFixed(2);;
         case '/':
         case '÷':
-            if (num1 === 0 || num2 === 0) return 'Error';
+            if (num2 === 0) return 'Error';
             return division(num1, num2).toFixed(2);;
     }
 }
